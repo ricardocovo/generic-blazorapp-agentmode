@@ -1,0 +1,36 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Routing
+@using MudBlazor
+
+<MudLayout>
+    <MudAppBar Color="Color.Primary" Elevation="4">
+        <MudToolbar>
+            <MudIconButton Edge="Start" Color="Color.Inherit" @onclick="ToggleNavMenu">
+                <MudIcon Icon="@Icons.Material.Filled.Menu" />
+            </MudIconButton>
+            <MudText Typo="Typo.h6" Class="ml-2">GenericBlazorApp.Web</MudText>
+        </MudToolbar>
+    </MudAppBar>
+
+    <MudDrawer @bind-Open="_drawerOpen" Color="Color.Default" Elevation="4">
+        <MudNavMenu>
+            <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+            <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Counter</MudNavLink>
+            <MudNavLink Href="weather" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.WbSunny">Weather</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private bool _drawerOpen = false;
+
+    private void ToggleNavMenu()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
+
