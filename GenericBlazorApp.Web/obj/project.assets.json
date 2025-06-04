@@ -590,19 +590,19 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "/home/runner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/generic-blazorapp-agentmode/GenericBlazorApp.Web/GenericBlazorApp.Web.csproj",
+      "projectUniqueName": "/home/runner/work/generic-blazorapp-agentmode/generic-blazorapp-agentmode/GenericBlazorApp.Web/GenericBlazorApp.Web.csproj",
       "projectName": "GenericBlazorApp.Web",
-      "projectPath": "/workspaces/generic-blazorapp-agentmode/GenericBlazorApp.Web/GenericBlazorApp.Web.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/generic-blazorapp-agentmode/GenericBlazorApp.Web/obj/",
+      "projectPath": "/home/runner/work/generic-blazorapp-agentmode/generic-blazorapp-agentmode/GenericBlazorApp.Web/GenericBlazorApp.Web.csproj",
+      "packagesPath": "/home/runner/.nuget/packages/",
+      "outputPath": "/home/runner/work/generic-blazorapp-agentmode/generic-blazorapp-agentmode/GenericBlazorApp.Web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "/home/runner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -620,11 +620,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -655,7 +650,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
