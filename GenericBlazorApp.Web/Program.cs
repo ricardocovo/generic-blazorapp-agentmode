@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using GenericBlazorApp.Web.Components;
 using MudBlazor.Services;
 

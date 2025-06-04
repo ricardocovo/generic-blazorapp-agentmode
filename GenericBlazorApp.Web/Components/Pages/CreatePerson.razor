@@ -1,0 +1,94 @@
+@page "/create-person"
+@using GenericBlazorApp.Web.Models
+@using System.ComponentModel.DataAnnotations
+
+<MudContainer>
+    <MudText Typo="Typo.h3" GutterBottom="true">Create a New Person</MudText>
+    
+    <MudPaper Class="pa-4 ma-2" Elevation="2">
+        <EditForm Model="@person" OnValidSubmit="@HandleValidSubmit">
+            <DataAnnotationsValidator />
+            
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="person.FullName" 
+                                  Label="Full Name" 
+                                  Variant="Variant.Outlined" 
+                                  MaxLength="128"
+                                  Required="true"
+                                  For="@(() => person.FullName)" />
+                </MudItem>
+                
+                <MudItem xs="12">
+                    <MudText Typo="Typo.subtitle1" Class="mb-2">Type *</MudText>
+                    <MudRadioGroup @bind-Value="person.Type" For="@(() => person.Type)">
+                        <MudRadio T="PersonType" Value="PersonType.Mother" Color="Color.Primary">Mother</MudRadio>
+                        <MudRadio T="PersonType" Value="PersonType.Child" Color="Color.Primary">Child</MudRadio>
+                    </MudRadioGroup>
+                    <ValidationMessage For="@(() => person.Type)" />
+                </MudItem>
+                
+                <MudItem xs="12">
+                    <MudDatePicker @bind-Date="person.BirthDate" 
+                                   Label="Birth Date" 
+                                   Variant="Variant.Outlined" 
+                                   Required="true"
+                                   For="@(() => person.BirthDate)" />
+                </MudItem>
+                
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="person.Notes" 
+                                  Label="Notes" 
+                                  Variant="Variant.Outlined" 
+                                  Lines="3"
+                                  For="@(() => person.Notes)" />
+                </MudItem>
+                
+                <MudItem xs="12">
+                    <MudButton ButtonType="ButtonType.Submit" 
+                               Variant="Variant.Filled" 
+                               Color="Color.Primary" 
+                               Class="mr-2">
+                        Create Person
+                    </MudButton>
+                    <MudButton Variant="Variant.Outlined" 
+                               Color="Color.Secondary" 
+                               OnClick="@Cancel">
+                        Cancel
+                    </MudButton>
+                </MudItem>
+            </MudGrid>
+        </EditForm>
+    </MudPaper>
+
+    @if (showSuccessMessage)
+    {
+        <MudAlert Severity="Severity.Success" ContentAlignment="HorizontalAlignment.Center" ShowCloseIcon="true" CloseIconClicked="(() => showSuccessMessage = false)">
+            Person created successfully!
+        </MudAlert>
+    }
+</MudContainer>
+
+@code {
+    private Person person = new Person();
+    private bool showSuccessMessage = false;
+
+    [Inject] NavigationManager Navigation { get; set; } = default!;
+
+    private async Task HandleValidSubmit()
+    {
+        // Here you would typically save to a database
+        // For now, we'll just show a success message and reset the form
+        showSuccessMessage = true;
+        person = new Person();
+        
+        // Hide the success message after 3 seconds
+        await Task.Delay(3000);
+        showSuccessMessage = false;
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/");
+    }
+}

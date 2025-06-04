@@ -1,0 +1,31 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Web publish profiles
+*.pubxml
+*.publishsettings
+
+# NuGet Packages
+*.nupkg
+packages/
+!packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Web assets
+node_modules/
+dist/
