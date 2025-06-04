@@ -29,6 +29,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/runner/work/generic-blazorapp-agentmode/generic-blazorapp-agentmode/GenericBlazorApp.Web/Components/Pages/CreatePerson.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DcmVhdGVQZXJzb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/runner/work/generic-blazorapp-agentmode/generic-blazorapp-agentmode/GenericBlazorApp.Web/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
