@@ -21,7 +21,7 @@
                 
                 <MudItem xs="12">
                     <MudText Typo="Typo.subtitle1" Class="mb-2">Type *</MudText>
-                    <MudRadioGroup @bind-Value="person.Type" For="@(() => person.Type)">
+                    <MudRadioGroup T="PersonType" @bind-Value="person.Type" For="@(() => person.Type)">
                         <MudRadio T="PersonType" Value="PersonType.Mother" Color="Color.Primary">Mother</MudRadio>
                         <MudRadio T="PersonType" Value="PersonType.Child" Color="Color.Primary">Child</MudRadio>
                     </MudRadioGroup>
